@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ratan Tata - Tribute Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(ellipse at bottom, #ffcc00 0%, #ff6600 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        #tribute-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        #tribute-info img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        #tribute-info p {
+            animation: slideInUp 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #tribute-quote {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            animation: fadeIn 2s;
+        }
+
+        blockquote {
+            font-size: 24px;
+            margin: 0;
+            padding: 20px;
+            border-left: 5px solid #ff6600;
+            color: #333;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tribute to Ratan Tata</h1>
+        <h2>Indian Business Tycoon and Philanthropist</h2>
+    </header>
+
+    <div id="tribute-info">
+        <img src="./Ratan-Tata-image-1024x576.avif" alt="Ratan Tata">
+        <p>
+            Ratan Tata is an Indian industrialist, investor, philanthropist, and former chairman of Tata Sons, the holding company of the Tata Group. He was born on December 28, 1937, in Mumbai, India. Under his leadership, the Tata Group became one of the largest and most respected business conglomerates in India and around the world.
+        </p>
+        <p>
+            Ratan Tata is known for his visionary leadership, ethical business practices, and commitment to corporate social responsibility. He played a crucial role in the development of various industries, including steel, automotive, telecommunications, and hospitality, among others.
+        </p>
+        <p>
+            Apart from his contributions to business, Ratan Tata is also actively involved in philanthropic activities through the Tata Trusts, supporting various social and community initiatives in education, healthcare, rural development, and more.
+        </p>
+    </div>
+
+    <div id="tribute-quote">
+        <blockquote>
+            "I don't believe in taking right decisions. I take decisions and then make them right." - Ratan Tata
+        </blockquote>
+    </div>
+
+    <footer>
+        Tribute page created by Aayush Kumar | All rights reserved
+    </footer>
+
+    <script>
+        // Scroll animation for quote section
+        const tributeQuote = document.getElementById('tribute-quote');
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const quotePosition = tributeQuote.offsetTop - window.innerHeight;
+            if (scrollPosition > quotePosition) {
+                tributeQuote.style.animation = 'fadeIn 2s';
+            }
+        });
+    </script>
+</body>
+</html>
